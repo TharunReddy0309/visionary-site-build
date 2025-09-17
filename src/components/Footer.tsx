@@ -108,28 +108,33 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Team */}
+          {/* Contact Info */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Team Blue Bite</h4>
-            <div className="space-y-3">
-              {teamMembers.map((member, index) => (
-                <div key={index} className="flex items-center justify-between">
-                  <div>
-                    <div className="text-sm font-medium text-foreground">{member.name}</div>
-                    <div className="text-xs text-muted-foreground">{member.role}</div>
-                  </div>
-                  {member.github !== "#" && (
-                    <Button variant="ghost" size="sm" className="h-6 w-6 p-0">
-                      <Github className="h-3 w-3" />
-                    </Button>
-                  )}
+            <h4 className="font-semibold text-foreground mb-4">Get In Touch</h4>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-forest/10 rounded-lg">
+                  <Mail className="h-4 w-4 text-forest" />
                 </div>
-              ))}
+                <div>
+                  <div className="text-sm font-medium text-foreground">Email Support</div>
+                  <div className="text-xs text-muted-foreground">fra.atlas.support@sih2025.gov.in</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-tech/10 rounded-lg">
+                  <Github className="h-4 w-4 text-tech" />
+                </div>
+                <div>
+                  <div className="text-sm font-medium text-foreground">Open Source</div>
+                  <div className="text-xs text-muted-foreground">Contribute on GitHub</div>
+                </div>
+              </div>
             </div>
             <div className="mt-4">
               <Button variant="outline_forest" size="sm" className="w-full">
-                <Users className="mr-2 h-4 w-4" />
-                View Full Team
+                <ExternalLink className="mr-2 h-4 w-4" />
+                Request Demo
               </Button>
             </div>
           </div>

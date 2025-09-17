@@ -38,17 +38,29 @@ const Workflow = () => {
     <section className="py-20 bg-gradient-card">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
-            <ArrowRight className="h-4 w-4" />
-            <span className="text-sm font-semibold">Intelligent Workflow</span>
+          <div className="inline-flex items-center gap-2 bg-gradient-primary px-6 py-3 rounded-full mb-8 shadow-glow">
+            <ArrowRight className="h-5 w-5 text-primary-foreground animate-pulse" />
+            <span className="text-sm font-bold text-primary-foreground tracking-wide">INTELLIGENT WORKFLOW</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            From Paper to <span className="text-primary">Digital Intelligence</span>
+          <h2 className="text-5xl md:text-6xl font-bold mb-8 text-foreground leading-tight">
+            From Paper to <span className="bg-gradient-primary bg-clip-text text-transparent">Digital Intelligence</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our streamlined process transforms decades of paper records into actionable 
-            digital insights through advanced AI and geospatial technologies
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
+            Our revolutionary AI-powered transformation engine converts decades of legacy Forest Rights Act 
+            documentation into <span className="text-primary font-semibold">intelligent, actionable insights</span> through 
+            cutting-edge machine learning and advanced geospatial intelligence.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div className="bg-forest/10 border border-forest/20 rounded-full px-4 py-2">
+              <span className="text-forest font-semibold text-sm">99.7% OCR Accuracy</span>
+            </div>
+            <div className="bg-tech/10 border border-tech/20 rounded-full px-4 py-2">
+              <span className="text-tech font-semibold text-sm">Real-time Processing</span>
+            </div>
+            <div className="bg-primary/10 border border-primary/20 rounded-full px-4 py-2">
+              <span className="text-primary font-semibold text-sm">Automated Asset Mapping</span>
+            </div>
+          </div>
         </div>
 
         {/* Workflow Image */}
