@@ -1,40 +1,55 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { 
-  Github, 
-  Mail, 
-  ExternalLink, 
-  MapPin, 
-  FileText, 
-  Users, 
-  Award,
-  TreePine
-} from "lucide-react";
-
+import { Github, Mail, ExternalLink, MapPin, FileText, Users, Award, TreePine } from "lucide-react";
 const Footer = () => {
-  const quickLinks = [
-    { name: "Project Overview", href: "#overview", icon: FileText },
-    { name: "Technology Stack", href: "#technology", icon: Github },
-    { name: "Team Members", href: "#team", icon: Users },
-    { name: "Documentation", href: "#docs", icon: ExternalLink }
-  ];
-
-  const projectInfo = [
-    { label: "Problem ID", value: "25108" },
-    { label: "Category", value: "Smart India Hackathon 2025" },
-    { label: "Team", value: "Blue Bite" },
-    { label: "Status", value: "In Development" }
-  ];
-
-  const teamMembers = [
-    { name: "Vikas R", role: "Lead Developer", github: "vikasr1503" },
-    { name: "Team Member 2", role: "AI/ML Engineer", github: "#" },
-    { name: "Team Member 3", role: "GIS Specialist", github: "#" },
-    { name: "Team Member 4", role: "Frontend Developer", github: "#" }
-  ];
-
-  return (
-    <footer className="bg-background border-t border-border/50">
+  const quickLinks = [{
+    name: "Project Overview",
+    href: "#overview",
+    icon: FileText
+  }, {
+    name: "Technology Stack",
+    href: "#technology",
+    icon: Github
+  }, {
+    name: "Team Members",
+    href: "#team",
+    icon: Users
+  }, {
+    name: "Documentation",
+    href: "#docs",
+    icon: ExternalLink
+  }];
+  const projectInfo = [{
+    label: "Problem ID",
+    value: "25108"
+  }, {
+    label: "Category",
+    value: "Smart India Hackathon 2025"
+  }, {
+    label: "Team",
+    value: "Blue Bite"
+  }, {
+    label: "Status",
+    value: "In Development"
+  }];
+  const teamMembers = [{
+    name: "Vikas R",
+    role: "Lead Developer",
+    github: "vikasr1503"
+  }, {
+    name: "Team Member 2",
+    role: "AI/ML Engineer",
+    github: "#"
+  }, {
+    name: "Team Member 3",
+    role: "GIS Specialist",
+    github: "#"
+  }, {
+    name: "Team Member 4",
+    role: "Frontend Developer",
+    github: "#"
+  }];
+  return <footer className="bg-background border-t border-border/50">
       <div className="container mx-auto px-6 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -71,17 +86,12 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.href} 
-                    className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-smooth text-sm"
-                  >
+              {quickLinks.map((link, index) => <li key={index}>
+                  <a href={link.href} className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-smooth text-sm">
                     <link.icon className="h-4 w-4" />
                     {link.name}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -89,12 +99,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Project Details</h4>
             <div className="space-y-3">
-              {projectInfo.map((info, index) => (
-                <div key={index} className="flex justify-between items-center text-sm">
+              {projectInfo.map((info, index) => <div key={index} className="flex justify-between items-center text-sm">
                   <span className="text-muted-foreground">{info.label}:</span>
                   <span className="text-foreground font-medium">{info.value}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
             <div className="mt-4 p-3 bg-forest/5 rounded-lg border border-forest/20">
               <div className="flex items-center gap-2 mb-2">
@@ -109,30 +117,7 @@ const Footer = () => {
           </div>
 
           {/* Team */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">Team Blue Bite</h4>
-            <div className="space-y-3">
-              {teamMembers.map((member, index) => (
-                <div key={index} className="flex items-center justify-between">
-                  <div>
-                    <div className="text-sm font-medium text-foreground">{member.name}</div>
-                    <div className="text-xs text-muted-foreground">{member.role}</div>
-                  </div>
-                  {member.github !== "#" && (
-                    <Button variant="ghost" size="sm" className="h-6 w-6 p-0">
-                      <Github className="h-3 w-3" />
-                    </Button>
-                  )}
-                </div>
-              ))}
-            </div>
-            <div className="mt-4">
-              <Button variant="outline_forest" size="sm" className="w-full">
-                <Users className="mr-2 h-4 w-4" />
-                View Full Team
-              </Button>
-            </div>
-          </div>
+          
         </div>
 
         <Separator className="mb-8" />
@@ -148,18 +133,10 @@ const Footer = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            <a 
-              href="https://github.com/vikasr1503" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-            >
+            <a href="https://github.com/vikasr1503" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
               GitHub Repository
             </a>
-            <a 
-              href="#docs" 
-              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-            >
+            <a href="#docs" className="text-muted-foreground hover:text-primary transition-smooth text-sm">
               Documentation
             </a>
             <Button variant="outline" size="sm">
@@ -178,8 +155,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
