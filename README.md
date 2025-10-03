@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+# 🌍 PattaPulse — AI-Powered FRA Atlas & WebGIS DSS
 
-## Project info
+**Live Demo:** [visionary-site-build.vercel.app](https://visionary-site-build.vercel.app/)
 
-**URL**: https://lovable.dev/projects/e45ddd82-1768-4ede-b092-c5c93e5e5df3
+---
 
-## How can I edit this code?
+## 📖 Overview
+PattaPulse is an **AI-powered platform** that digitizes Forest Rights Act (FRA) records, integrates them with **satellite imagery**, and provides a **WebGIS-based Decision Support System (DSS)**.  
 
-There are several ways of editing your application.
+It empowers decision-makers, tribal communities, and government departments by bridging the gap between **scattered legacy records** and **modern data-driven governance**.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e45ddd82-1768-4ede-b092-c5c93e5e5df3) and start prompting.
+## 🚀 Key Features
+- 📑 **OCR + NLP Digitization** — Convert scanned FRA pattas into structured, searchable records.  
+- 🗺️ **AI-Asset Mapping** — Detect farmland, ponds, forests, and homesteads from satellite imagery.  
+- 🌐 **Interactive WebGIS** — View FRA claims, granted titles, and assets with filters and search.  
+- 🧠 **Decision Support System (DSS)** — Suggests Central Sector Schemes (PM-KISAN, JJM, MGNREGA, DAJGUA).  
+- 📥 **Data Export** — Download reports and GeoJSON/CSV for planning and monitoring.  
+- 📱 **Mobile-Friendly UI** — Access data and insights from anywhere.  
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🛠️ Tech Stack
+- **Frontend:** React / Next.js, Mapbox GL / Leaflet  
+- **Backend:** FastAPI (Python) / Flask  
+- **Database:** PostgreSQL + PostGIS  
+- **AI/ML:** OCR (Tesseract/TrOCR), NER (IndicBERT/XLM-R), CV Models (U-Net, Mask R-CNN)  
+- **Infra:** Docker, Vercel (for demo hosting), Cloud deployment for scalability  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## ⚡ Quick Start (Demo Mode)
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 1. Clone Repo
+```bash
+git clone https://github.com/<your-org>/<repo>.git
+cd <repo>
+2. Backend Setup
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
+3. Frontend Setup
+cd frontend
+npm install
 npm run dev
-```
+# Open http://localhost:3000
+4. API Docs
+http://localhost:8000/docs
+🐳 Docker Setup
+docker-compose up --build
+# then open http://localhost:3000
+📊 Core Modules
+Document Digitization → OCR + NER for FRA records.
 
-**Edit a file directly in GitHub**
+Geospatial Mapping → Geo-referenced polygons stored in PostGIS.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+AI Asset Mapping → Detect & classify natural and social assets.
 
-**Use GitHub Codespaces**
+WebGIS Portal → Map layers, filters, and downloads.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Decision Support → Rule-based + AI engine for scheme recommendations.
 
-## What technologies are used for this project?
 
-This project is built with:
+📚 References
+FRA, 2006 — Ministry of Tribal Affairs
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Sentinel-2 / Landsat imagery — ESA & USGS
 
-## How can I deploy this project?
+DAJGUA Convergence Program — Govt. of India
 
-Simply open [Lovable](https://lovable.dev/projects/e45ddd82-1768-4ede-b092-c5c93e5e5df3) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+👥 Team
+Developed by Team Blue Byte for Smart India Hackathon 2025 🚀
