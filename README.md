@@ -32,25 +32,29 @@ It empowers decision-makers, tribal communities, and government departments by b
 
 ## ⚡ Quick Start (Demo Mode)
 
-### 1. Clone Repo
-```bash
+### 1️⃣ Clone Repo
 git clone https://github.com/<your-org>/<repo>.git
 cd <repo>
-2. Backend Setup
+
+### 2️⃣ Backend Setup
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
-3. Frontend Setup
+
+### 3️⃣ Frontend Setup
 cd frontend
 npm install
 npm run dev
+
 # Open http://localhost:3000
-4. API Docs
+### 4️⃣ API Docs
 http://localhost:8000/docs
-🐳 Docker Setup
+
+### 🐳 Docker Setup
 docker-compose up --build
 # then open http://localhost:3000
+
 📊 Core Modules
 Document Digitization → OCR + NER for FRA records.
 
