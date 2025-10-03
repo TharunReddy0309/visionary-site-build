@@ -33,9 +33,9 @@ It empowers decision-makers, tribal communities, and government departments by b
 ## ⚡ Quick Start (Demo Mode)
 
 ### 1️⃣ Clone Repo
-git clone https://github.com/<your-org>/<repo>.git
+'git clone https://github.com/<your-org>/<repo>.git'
 
-cd <repo>
+'cd <repo>'
 
 ### 2️⃣ Backend Setup
 python3 -m venv .venv
